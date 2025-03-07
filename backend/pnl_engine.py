@@ -1,3 +1,7 @@
+import numpy as np
+
 def calculate_mtm(prices):
-    mtm = prices[-1] - prices[0]
-    return round(mtm, 2)
+    mtm = np.array(prices[-1]) - np.array(prices[0])
+    mtm = np.round(mtm, 2)
+    mtm = mtm.tolist()
+    return mtm
